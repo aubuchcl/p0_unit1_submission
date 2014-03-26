@@ -14,10 +14,20 @@
 
 
 # 2. Initial Solution
-
-
-
-
+def mode(array)
+  count = Hash.new(0)  
+    array.each do |x| count[x] += 1 end
+    max_val =  count.values.max
+    puts max_val
+    if array == array.uniq
+        return array
+    else
+        array1 = array.keep_if do |x| array.count(x) >= count.values.max end
+        array1.uniq!
+    end
+    
+end
+   
 # 3. Refactored Solution
 
 

@@ -10,9 +10,18 @@
 
 # 1. Pseudocode
 
-# What is the input?
+# What is the input? 
+
+# values to be added to the Array
+
 # What is the output? (i.e. What should the code return?)
+#class array 
+# a new array that has added said values
 # What are the steps needed to solve the problem?
+# def the two methods
+#set up a dummy array that accepts all the new values that are passed through
+#combine the two arrays 
+#return one array
 
 
 # 2. Initial Solution

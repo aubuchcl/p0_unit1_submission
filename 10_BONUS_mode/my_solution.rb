@@ -29,7 +29,16 @@ def mode(array)
 end
    
 # 3. Refactored Solution
-
+# def mode(array)
+#   count = Hash.new(0)     
+#     array.each do |x| count[x] += 1 end   
+#     if array == array.uniq
+#         return array
+#     else
+#         output = array.keep_if do |x| array.count(x) >= count.values.max end
+#         output.uniq!
+#     end
+# end
 
 
 # 4. Reflection 

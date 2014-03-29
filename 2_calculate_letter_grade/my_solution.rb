@@ -14,7 +14,28 @@
 
 
 # 2. Initial Solution
+def get_grade(array)
+	sum = 0
+	array.each do |i|
+		sum += i
+	end
+	average = sum / array.length
 
+	case
+	when average >= 90
+		return "A"
+	when average >= 80
+		return "B"
+	when average >= 70
+		return "C"
+	when average >= 60
+		return "D"
+	when average <= 60
+		return "F"
+	else
+		return "did not compute"
+	end
+end	
 
 
 

@@ -25,7 +25,38 @@
 
 
 # 2. Initial Solution
-
+class Array
+	def pad(num, phrase)
+		new_array = self
+		array_size = self.length - 1
+		new_size = num - array_size
+		if phrase = nil
+			new_size.times do 
+				new_array << phrase
+			end
+		else
+			new_size.times do
+				new_array << phrase
+			end
+		end
+	new_array
+	end
+	def pad!(num, phrase)
+		new_array = self
+		array_size = self.length - 1
+		new_size = num - array_size
+		if phrase = nil
+			new_size.times do 
+				new_array << phrase
+			end
+		else
+			new_size.times do
+				new_array << phrase
+			end
+		end
+	new_array	
+	end
+end
 
 
 

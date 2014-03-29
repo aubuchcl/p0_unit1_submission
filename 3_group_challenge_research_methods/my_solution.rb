@@ -19,17 +19,32 @@ end
 #
 
 # Person 2
-def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+def my_array_modification_method(array, pets)
+  array.inject([]) do |new_array, elements|
+		new_array << elements if elements.to_i == 0
+		new_array << elements + pets if elements.to_i >= 1
+		new_array
+	end
 end
 
-def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
+
+def my_hash_modification_method(hash, age)
+  hash.each {|key, value| hash[key] = age + value}
+	return hash
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
+# array_mod I used inject.  I tried using almost every differnt
+# method available in the ruby docs and I worked on this for hours
+# trying to figure out how to only modify the numbers without modifying
+# the text.  Needless to say I finally stumbled upon inject.  The example
+# I found only had a single arguement and produced a new array of just 
+# the adjusted numbers without the text.  After reading the article a
+# few times I understood that I needed only to add a line that passed
+# the string values to the new array and a line that modified the numbers
+
+#the hash mod was a relatively easy hash.each method that iterated
+# over each key and changed the value accordingly.
 #
 
 

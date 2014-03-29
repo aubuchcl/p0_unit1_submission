@@ -14,7 +14,18 @@
 
 
 # 2. Initial Solution
-
+def median(array)
+	array.sort!
+	x = ((array.length - 1) / 2) 
+	y = (((array.length - 1)/2)+ 1)
+	if array.length % 2 == 0
+		med = med.to_f
+		med = (array[y].to_f + array[x].to_f)	/ 2.0
+	else
+		med = array[x]
+	end
+	return med
+end
 
 
 

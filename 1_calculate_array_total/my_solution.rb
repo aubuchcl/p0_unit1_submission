@@ -49,3 +49,7 @@ end
 
 
 # 4. Reflection 
+
+# This challenge seemed more like a review.  Pretty straight forward.  I 
+# really enjoy having the test to pass.  It makes creating the code more like
+# a game and less like a task.

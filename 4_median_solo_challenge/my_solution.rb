@@ -30,7 +30,13 @@ end
 
 
 # 3. Refactored Solution
-
+# When i went to refactor the code got really confusing.  I really like my 
+# initial solution.  I think what I should really start doing is keeping a changelog 
+# or sometype of version control of my code so I can display the ways in which
+# it has changed from my first try.
 
 
 # 4. Reflection 
+# It was interesting to see the need for a float to pass the test.  This really
+# reinforced two concepts for me.  One: I know that I can read a test error correctly
+# and two: I can make a float(not just rootbeer).  

@@ -26,35 +26,41 @@
 
 # 2. Initial Solution
 class Array
-	def pad(num, phrase)
-		new_array = self
-		array_size = self.length - 1
-		new_size = num - array_size
-		if phrase = nil
-			new_size.times do 
-				new_array << phrase
-			end
+	def pad(num, phrase = nil)
+		new_array = Array.new
+		if num <= self.length
+			new_array = new_array + self
+			x = new_array
 		else
-			new_size.times do
-				new_array << phrase
+			new_size = num - self.length
+			new_size.times do 
+				new_array.push(phrase)
+			x = self + new_array
 			end
 		end
-	new_array
+		return x
+
+		# new_array = self
+		# if num == 0
+		# 	return new_array
+		# else
+		# 	new_size = num - self.length
+		# 	new_size.times do 
+		# 		new_array.push(phrase)
+		# 	new_array
+		# 	end
+		# end
+		# new_array
 	end
-	def pad!(num, phrase)
+
+	def pad!(num, phrase = nil)
+		new_size = num - self.length
 		new_array = self
-		array_size = self.length - 1
-		new_size = num - array_size
-		if phrase = nil
-			new_size.times do 
-				new_array << phrase
-			end
-		else
-			new_size.times do
-				new_array << phrase
-			end
+		new_size.times do 
+			new_array.push(phrase)
+		new_array
 		end
-	new_array	
+		new_array
 	end
 end
 
@@ -62,6 +68,15 @@ end
 
 # 3. Refactored Solution
 
+# I have absolutely no idea what I could do to change this, just because
+# 	of how many chages I made to adjust for the rules to all work.
+
+# 4. Reflection
+# This was way harder than I thought it would be.  The initial code was pretty
+# simple, but my array#pad kept destructing and I couldnt figure out why.  I
+# came to find out that adding its value to an empty array that had already been
+# created worked.  The rest of the assignment wasnt too bad just wierd to think
+# of creating methods for soemthing that is called [array].newmethod(params),
+# due to the fact that we have mostly just been working on methods that use params only.
 
 
-# 4. Reflection 

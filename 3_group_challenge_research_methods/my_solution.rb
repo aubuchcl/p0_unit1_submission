@@ -93,7 +93,19 @@ p my_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "only", 3
 p my_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
+# This is pretty much the same thing I put under the identify and describe section
+ # The reason for this is I was so stoked when I finally got this to work.
+ # I tried using almost every differnt
+# method available in the ruby docs and I worked on this for hours
+# trying to figure out how to only modify the numbers without modifying
+# the text.  Needless to say I finally stumbled upon inject.  The example
+# I found only had a single arguement and produced a new array of just 
+# the adjusted numbers without the text.  After reading the article a
+# few times I understood that I needed only to add a line that passed
+# the string values to the new array and a line that modified the numbers
+
+#the hash mod was a relatively easy hash.each method that iterated
+# over each key and changed the value accordingly.
 # 
 # 
 # 

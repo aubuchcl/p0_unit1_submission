@@ -25,51 +25,56 @@
 
 
 # 2. Initial Solution
-class Array
-	def pad(num, phrase = nil)
-		new_array = Array.new
-		if num <= self.length
-			new_array = new_array + self
-			x = new_array
-		else
-			new_size = num - self.length
-			new_size.times do 
-				new_array.push(phrase)
-			x = self + new_array
-			end
-		end
-		return x
+# class Array
+# 	def pad(num, phrase = nil)
+# 		new_array = Array.new
+# 		if num <= self.length
+# 			new_array = new_array + self
+# 			x = new_array
+# 		else
+# 			new_size = num - self.length
+# 			new_size.times do 
+# 				new_array.push(phrase)
+# 			x = self + new_array
+# 			end
+# 		end
+# 		return x
 
-		# new_array = self
-		# if num == 0
-		# 	return new_array
-		# else
-		# 	new_size = num - self.length
-		# 	new_size.times do 
-		# 		new_array.push(phrase)
-		# 	new_array
-		# 	end
-		# end
-		# new_array
-	end
+# 	end
 
-	def pad!(num, phrase = nil)
-		new_size = num - self.length
-		new_array = self
-		new_size.times do 
-			new_array.push(phrase)
-		new_array
-		end
-		new_array
-	end
-end
+# 	def pad!(num, phrase = nil)
+# 		new_size = num - self.length
+# 		new_array = self
+# 		new_size.times do 
+# 			new_array.push(phrase)
+# 		new_array
+# 		end
+# 		new_array
+# 	end
+# end
 
 
 
 # 3. Refactored Solution
 
-# I have absolutely no idea what I could do to change this, just because
-# 	of how many chages I made to adjust for the rules to all work.
+#did this after doing section 6
+
+class Array
+	def pad(num, phrase = nil)
+		output = [] << self
+		(num - length).times{output.push(phrase)}
+
+		output.flatten
+
+	end
+
+	def pad!(num, phrase = nil)
+		(num - self.length).times do
+			self.push(phrase)
+		end
+		self
+	end
+end
 
 # 4. Reflection
 # This was way harder than I thought it would be.  The initial code was pretty
